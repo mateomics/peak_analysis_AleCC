@@ -232,7 +232,7 @@ En formato mermaid , que stackEdit sí reconoce.
 graph TD
   usuario["🧑 Usuario"] -->|Ejecuta script Python| UC1["📂 Leer archivo de picos y genoma FASTA"]
   UC1 -->|Verifica formato y existencia| UC1a["⚠️ Validar archivo de picos y genoma"]
-  UC1a -->|Si es válido, continuar| UC2["🔍 Extraer y agrupar secuencias por TF_name"]
+  UC1a --> UC2["🔍 Extraer y agrupar secuencias por TF_name"]
 
   UC2 -->|Verifica límites del genoma| UC2a["⚠️ Validar coordenadas de los picos"]
   UC2a --> UC3["📄 Generar archivos FASTA"]
