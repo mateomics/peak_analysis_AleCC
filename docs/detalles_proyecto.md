@@ -235,7 +235,7 @@ graph TD
   UC1a -->|Si es válido, continuar| UC2["🔍 Extraer y agrupar secuencias por TF_name"]
 
   UC2 -->|Verifica límites del genoma| UC2a["⚠️ Validar coordenadas de los picos"]
-  UC3["📄 Generar archivos FASTA"]
+  UC2a --> UC3["📄 Generar archivos FASTA"]
   
   usuario -->|Ejecuta script Shell| UC4["📂 Leer directorio de archivos FASTA"]
   UC4 -->|Genera comandos para meme| UC5["⚙️ Generar script de comandos meme"]
