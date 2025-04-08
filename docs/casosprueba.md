@@ -54,3 +54,52 @@ ls
 log.out
 fasta_peaks/
 ```
+
+4. **Caso: Directorio de salida inexistente.**
+
+- **Entradas:**
+  - Archivo de picos válido.
+  - Archivo FASTA del genoma válido.
+  - Directorio de salida inexistente.
+
+- **Esperado:** `Warning: Output directory does not exist`
+
+```python
+mk_fasta_from_peaks.py -i peak_file.txt -g Ecoli.fna -o fasta_peaks/
+```
+`Error: Output directory does not exist`
+
+5. **Caso: El archivo de picos contiene más de un genoma.**
+
+- **Entradas:**
+  - Archivo de picos que hace referencia a múltiples genomas.
+  - Archivo FASTA del genoma válido (pero solo uno).
+  - Directorio de salida.
+
+- **Esperado:**
+  - El sistema debe imprimir un mensaje de advertencia: `"Warning: Multiple genomes found in peak file. Using the first genome."`
+  - El programa debe continuar con el primer genoma en el archivo de picos.
+
+```bash
+mk_fasta_from_peaks.py -i peak_file.txt -g Ecoli.fna -o fasta_peaks/
+```
+`"Warning: Multiple genomes found in peak file. Using the first genome."`
+
+
+6. **Caso: ausencia de algún campo en el archivo de entrada, sea `Peak_start` o `Peak_end`.**
+	
+	- **Entradas:**
+	
+		- Archivo de picos con los `Peak_start` o `Peak_end` faltantes. 
+		- Archivo FASTA del genoma válido.
+		- Directorio de salida.
+
+	- **Esperado:**
+
+		- El software debe imprimir un mensaje , indicando el campo faltante:
+
+```py
+mk_fasta_from_peaks.py -i peak_file.txt -g Ecoli.fna -o fasta_peaks/		
+```
+`Error: Peak_start is empty`
+`Error: Peak_end is empty`
