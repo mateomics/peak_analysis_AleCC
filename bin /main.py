@@ -17,7 +17,7 @@ def main():
     print(f"Se agruparon secuencias para {len(secuencias)} factores de transcripción únicos.")
 
     guardar_fasta_por_tf(secuencias, carpeta_salida)
-    print(f"\n Archivos FASTA generados en: {carpeta_salida}\n")
+    print(f"Archivos FASTA generados en la carpeta: {carpeta_salida}\n")
 
 if __name__ == "__main__":
     main()
