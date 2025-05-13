@@ -3,7 +3,14 @@ from genome import cargar_genoma
 from peaks import leer_archivo_picos
 from io_utils import extraer_secuencias, guardar_fasta_por_tf
 
+"""
+Este script principal coordina la carga del genoma, la lectura de picos y la extracción de secuencias.
+Genera archivos FASTA para cada factor de transcripción.
+
+"""
+
 def main():
+    
     # Rutas relativas dentro del repositorio
     archivo_genoma = os.path.join("data", "E_coli_K12_MG1655_U00096.3.txt")
     archivo_picos = os.path.join("data", "union_peaks_file.tsv")

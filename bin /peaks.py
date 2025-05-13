@@ -1,5 +1,10 @@
 import os 
 
+"""
+Este módulo contiene funciones para leer picos de unión de factores de transcripción (TF).
+"""
+
+
 def leer_archivo_picos(path_peaks):
     """Lee el archivo de picos (.tsv) e identifica las columnas de TF_name, Peak_start y Peak_end."""
     
@@ -18,3 +23,4 @@ def leer_archivo_picos(path_peaks):
             }
             picos.append(pico)
     return picos
+

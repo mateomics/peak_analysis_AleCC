@@ -88,14 +88,14 @@ def guardar_fasta_por_tf(secuencia_TF, output):
 
 
 #Solicitar al usuario las rutas de los archivos
-archivo_genoma= input("Ingrese la ruta del archivo de genoma (FASTA): ")
-archivo_picos= input("Ingrese la ruta del archivo de picos: ")
-carpeta_salida= input("Ingrese la ruta de la carpeta de salida: ")
+#archivo_genoma= input("Ingrese la ruta del archivo de genoma (FASTA): ")
+#archivo_picos= input("Ingrese la ruta del archivo de picos: ")
+#carpeta_salida= input("Ingrese la ruta de la carpeta de salida: ")
 
 #Ejemplo:
-#archivo_genoma = "/home/carrillo/Downloads/mk-fasta-meme/mk-fasta-meme/E_coli_K12_MG1655_U00096.3.txt"
-#archivo_picos = "/home/carrillo/Downloads/mk-fasta-meme/mk-fasta-meme/union_peaks_file.tsv"
-#carpeta_salida = "/home/carrillo/Downloads/mk-fasta-meme/resultados"
+archivo_genoma = "/home/carrillo/Downloads/mk-fasta-meme/mk-fasta-meme/E_coli_K12_MG1655_U00096.3.txt"
+archivo_picos = "/home/carrillo/Downloads/mk-fasta-meme/mk-fasta-meme/union_peaks_file.tsv"
+carpeta_salida = "/home/carrillo/Downloads/mk-fasta-meme/resultados"
 
 #MAIN
 genoma = cargar_genoma(archivo_genoma)

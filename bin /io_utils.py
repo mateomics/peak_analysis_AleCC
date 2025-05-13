@@ -1,28 +1,32 @@
 import os
+"""
+Este módulo contiene funciones para extraer secuencias de un genoma basado en picos de unión de factores de transcripción (TF).
+Las funciones incluyen la extracción de secuencias específicas y la creación de archivos FASTA para cada TF.
+"""
+
 
 def extraer_secuencias(peaks, genoma):
-    """
-    Extrae fragmentos de la secuencia del genoma según coordenadas de picos.
-    Retorna un diccionario agrupado por TF_name.
-    """
+    """Usa las coordenadas para extraer fragmentos de genoma por cada TF."""
+
     secuencia_TF = {}
     for pico in peaks:
         TF = pico["TF_name"]
         inicio = pico["start"]
         fin = pico["end"]
-        secuencia = genoma[inicio:fin]
 
+        #Extraer la secuencia del genoma segun las coordenadas 
+        secuencia = genoma[inicio:fin]
+        
         if TF not in secuencia_TF:
             secuencia_TF[TF] = []
         secuencia_TF[TF].append(secuencia)
-    
+
     return secuencia_TF
 
 
 def guardar_fasta_por_tf(secuencia_TF, output):
-    """
-    Guarda archivos FASTA por cada TF con sus secuencias correspondientes.
-    """
+    """Crea un archivo .fa por cada TF_name con las secuencias correspondientes."""
+
     if not os.path.exists(output):
         os.makedirs(output)
 
