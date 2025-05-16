@@ -6,7 +6,14 @@ Las funciones incluyen la extracción de secuencias específicas y la creación 
 
 
 def extraer_secuencias(peaks, genoma):
-    """Usa las coordenadas para extraer fragmentos de genoma por cada TF."""
+    """Usa las coordenadas para extraer fragmentos de genoma por cada TF.
+    
+    Parámetros: 
+    peaks: Lista de diccionarios con la informaciómn de los picos de unión ("TF_name", "start" y "end").
+    genoma: Secuencia
+
+    Devuelve un diccionario donde las claves son los nombres de los TF y los valores son listas de secuencias extraídas.
+    """
 
     secuencia_TF = {}
     for pico in peaks:
@@ -25,7 +32,12 @@ def extraer_secuencias(peaks, genoma):
 
 
 def guardar_fasta_por_tf(secuencia_TF, output):
-    """Crea un archivo .fa por cada TF_name con las secuencias correspondientes."""
+    """Crea un archivo .fa por cada TF_name con las secuencias correspondientes.
+    
+    Parámetros:     
+    secuencia_TF: diccionario donde las claves son los nombres de los TF y los valores son listas de secuencias extraídas.
+    output: Ruta de la carpeta donde se guardarán los archivos FASTA.
+    """
 
     if not os.path.exists(output):
         os.makedirs(output)

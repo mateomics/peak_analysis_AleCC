@@ -6,7 +6,12 @@ Este módulo contiene funciones para leer picos de unión de factores de transcr
 
 
 def leer_archivo_picos(peaks_archivo):
-    """Lee el archivo de picos (.tsv) e identifica las columnas de TF_name, Peak_start y Peak_end."""
+    """Lee el archivo de picos (.tsv) e identifica las columnas de TF_name, Peak_start y Peak_end.
+    
+    Parámetro:
+    peaks_archivo: Ruta al archivo de los picos
+
+    Devuelve una lista de diccionarios con la información de los picos."""
     
     picos = []
     if not os.path.isfile(peaks_archivo): #Validacion de existencia del archivo
