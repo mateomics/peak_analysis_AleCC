@@ -70,6 +70,7 @@ mk_fasta_from_peaks.py -i peak_file.txt -g Ecoli.fna -o fasta_peaks/
 `Error: Output directory does not exist`
 
 5. **Caso: El archivo de picos contiene más de un genoma.**
+   #### Como se podría distinguir entre .tsv donde los picos exceden al genoma y donde hay más de un genoma? No son funcionalmente lo mismo?
 
 - **Entradas:**
   - Archivo de picos que hace referencia a múltiples genomas.
@@ -87,6 +88,7 @@ mk_fasta_from_peaks.py -i peak_file.txt -g Ecoli.fna -o fasta_peaks/
 
 
 6. **Caso: ausencia de algún campo en el archivo de entrada, sea `Peak_start` o `Peak_end`.**
+   #### Estaría bien que si en ArgParse usas arguumentos opcionales, habilites un default para evitar estos errores
 	
 	- **Entradas:**
 	
