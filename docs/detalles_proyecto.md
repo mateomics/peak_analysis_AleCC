@@ -163,38 +163,6 @@ El programa deberá aceptar como parámetros desde la línea de comandos los sig
    b. Escribir secuencias en archivo
 5. Fin
 ```
-
-#### Módulo 2: Automatizador del Análisis con `meme`
-
-**Objetivo:** Generar un script de shell que contenga todos los comandos necesarios para ejecutar `meme` en los archivos FASTA generados para cada factor de transcripción.
-
-**Flujo de Trabajo:**
-
-1.  **Lectura de Entradas:**
-    
-    - Directorio con archivos fasta.
-    
-2.  **Generación de Comandos:**
-    
-    -   Iterar sobre cada archivo `.fa` en el directorio.
-    -   Generar una línea de comando para ejecutar `meme` usando cada archivo FASTA.
-    -   Incluir opciones necesarias (por ejemplo, `-oc <output_directory>`, `-mod oops`, etc.) y asegurar nombrar el directorio de salida para cada ejecución de `meme`.
-3.  **Salida del Script:**
-    - salida a pantalla
-    
-
-**Algoritmo:**
-
-```plaintext
-1. Inicio
-2. Leer todos los archivos FASTA en el directorio
-3. Para cada archivo FASTA:
-   a. Formar comando: meme <archivo_fasta> -oc <nombre_directorio> ... 
-   b. Imprimir comando
-4. Redireccionar salida a un archivo script: run_meme.sh
-5. Fin
-``` 
-
 ### Diagrama de Caso de Uso (PlantUML) para Visualizar el Proceso:
 
 Usar un editor para visualizar el diagrama <https://sujoyu.github.io/plantuml-previewer/>

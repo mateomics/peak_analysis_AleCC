@@ -4,7 +4,6 @@ Este módulo contiene funciones para extraer secuencias de un genoma basado en p
 Las funciones incluyen la extracción de secuencias específicas y la creación de archivos FASTA para cada TF.
 """
 
-
 def extraer_secuencias(peaks, genoma):
     """Usa las coordenadas para extraer fragmentos de genoma por cada TF.
     
