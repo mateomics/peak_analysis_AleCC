@@ -38,3 +38,5 @@ def main():
 if __name__ == "__main__":
     main()
 
+
+#python3 /home/carrillo/Python_2do_sem/peak_analysis/bin/main.py --picos data/union_peaks_file.tsv  --genoma data/E_coli_K12_MG1655_U00096.3.txt --salida results
