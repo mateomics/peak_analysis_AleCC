@@ -17,11 +17,12 @@ def extraer_secuencias(peaks, genoma):
     secuencia_TF = {}
     for pico in peaks:
         TF = pico["TF_name"]
-        inicio = pico["start"]
-        fin = pico["end"]
+        inicio = int(float(pico["start"]))
+        fin = int(float(pico["end"]))
 
         #Extraer la secuencia del genoma segun las coordenadas 
-        secuencia = genoma[inicio:fin]
+        # Recordar que el slicing en python excluye el último elemento, por lo que sin + 1 es el intervalo cerrado [inicio, fin -1]
+        secuencia = genoma[inicio:fin + 1]
         
         if TF not in secuencia_TF:
             secuencia_TF[TF] = []
