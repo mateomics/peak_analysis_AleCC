@@ -1,12 +1,14 @@
-Proyecto de Automatización para la Extracción de Sitios de Unión de Factores de Transcripción en E. coli en experimentos de ChIP-Seq
+### Proyecto de Automatización para la Extracción de Sitios de Unión de Factores de Transcripción en E. coli en experimentos de ChIP-Seq
 Resumen
+
 Este proyecto tiene como objetivo automatizar el proceso de identificación del sitio exacto de unión de los reguladores transcripcionales para 144 factores de transcripción (TFs) en el genoma completo de Escherichia coli. Las regiones de unión de estos TFs se han determinado mediante la técnica ChIP-seq.
 
 Datos Disponibles
 Archivo de Picos
 union_peaks_file.tsv
 
-Contiene información sobre las regiones de unión de los 144 factores de transcripción. Se organiza en las siguientes columnas:
+
+*Contiene información sobre las regiones de unión de los 144 factores de transcripción. Se organiza en las siguientes columnas:*
 
 Dataset_Ids: Identificadores de los datasets. Cada identificador representa un experimento o condición específica bajo la cual se identificaron los sitios de unión para el TF correspondiente.
 TF_name: Nombre del factor de transcripción que se une a la secuencia de ADN especificada.
