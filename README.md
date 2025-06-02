@@ -27,7 +27,7 @@ Contiene información sobre las regiones de unión de los 144 TFs. Las columnas 
 - `Proximal_genes`: Genes próximos al sitio de unión.
 - `Center_position_type`: Tipo de posición del centro del pico (e.g., intergénica, intrónica, etc.).
 
-#### 🧬 Genoma Completo de *E. coli*  
+####Genoma Completo de *E. coli*  
 Disponible en formato **FASTA** como:  
 **`E_coli_K12_MG1655_U00096.3.txt`**
 
@@ -35,7 +35,7 @@ Disponible en formato **FASTA** como:
 
 ### Objetivos del Proyecto
 
-####Generación de Archivos FASTA
+#### Generación de Archivos FASTA
 
 Desarrollar un programa que extraiga y compile las **secuencias de picos** para cada TF en archivos individuales en formato **FASTA**.  
 Cada archivo representará un regulador específico.
